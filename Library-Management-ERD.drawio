@@ -1,0 +1,69 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36" version="26.2.14">
+  <diagram name="Library Management System ER Diagram" id="diagram-1">
+    <mxGraphModel dx="1281" dy="527" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="books" value="BOOKS" style="shape=swimlane;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="100" y="60" width="160" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="book_id" value="book_id" style="text;fillColor=#FFF2CC;fontSize=12;" parent="books" vertex="1">
+          <mxGeometry y="40" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="title" value="title" style="text;fillColor=#FFF2CC;fontSize=12;" parent="books" vertex="1">
+          <mxGeometry y="70" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="author" value="author" style="text;fillColor=#FFF2CC;fontSize=12;" parent="books" vertex="1">
+          <mxGeometry y="100" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="genre" value="genre" style="text;fillColor=#FFF2CC;fontSize=12;" parent="books" vertex="1">
+          <mxGeometry y="130" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="copies" value="available_copies" style="text;fillColor=#FFF2CC;fontSize=12;" parent="books" vertex="1">
+          <mxGeometry y="160" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="members" value="MEMBERS" style="shape=swimlane;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="400" y="60" width="160" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="member_id" value="member_id" style="text;fillColor=#FFF2CC;fontSize=12;" parent="members" vertex="1">
+          <mxGeometry y="40" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="name" value="name" style="text;fillColor=#FFF2CC;fontSize=12;" parent="members" vertex="1">
+          <mxGeometry y="70" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="join_date" value="join_date" style="text;fillColor=#FFF2CC;fontSize=12;" parent="members" vertex="1">
+          <mxGeometry y="100" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="issued_books" value="ISSUED_BOOKS" style="shape=swimlane;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="250" y="300" width="180" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="issue_date" value="issue_date" style="text;fillColor=#FFF2CC;fontSize=12;" parent="issued_books" vertex="1">
+          <mxGeometry y="40" width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="return_date" value="return_date" style="text;fillColor=#FFF2CC;fontSize=12;" parent="issued_books" vertex="1">
+          <mxGeometry y="70" width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="actual_return_date" value="actual_return_date" style="text;fillColor=#FFF2CC;fontSize=12;" parent="issued_books" vertex="1">
+          <mxGeometry y="100" width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="fines" value="FINES" style="shape=swimlane;whiteSpace=wrap;html=1;fillColor=#DAE8FC;strokeColor=#6C8EBF;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="540" y="300" width="160" height="100" as="geometry">
+            <mxRectangle x="540" y="300" width="80" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fine_id" value="fine_id" style="text;fillColor=#FFF2CC;fontSize=12;" parent="fines" vertex="1">
+          <mxGeometry y="40" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="rel1" style="endArrow=block;strokeColor=#6C8EBF;" parent="1" source="books" target="issued_books" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel2" style="endArrow=block;strokeColor=#6C8EBF;" parent="1" source="members" target="issued_books" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel3" style="endArrow=block;strokeColor=#6C8EBF;" parent="1" source="issued_books" target="fines" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
